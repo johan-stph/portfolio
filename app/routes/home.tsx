@@ -1,4 +1,5 @@
-import { Github, Linkedin, Mail, Network, Eye, Gamepad2 } from 'lucide-react';
+import { Mail, Network, Eye, Gamepad2 } from 'lucide-react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { Button } from '~/components/ui/button';
 import {
   Card,
@@ -162,7 +163,7 @@ export default function Home() {
               }
               className="flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white"
             >
-              <Github className="w-5 h-5" />
+              <FaGithub className="w-5 h-5" />
               GitHub
             </Button>
 
@@ -170,21 +171,19 @@ export default function Home() {
               variant="outline"
               onClick={() =>
                 window.open(
-                  'https://linkedin.com/in/johannes-stephan',
+                  'https://www.linkedin.com/in/stephanjohannes/',
                   '_blank'
                 )
               }
               className="flex items-center gap-2 border-blue-200 text-blue-700 hover:bg-blue-50 dark:border-blue-700 dark:text-blue-300 dark:hover:bg-blue-950"
             >
-              <Linkedin className="w-5 h-5" />
+              <FaLinkedin className="w-5 h-5" />
               LinkedIn
             </Button>
 
             <Button
               variant="secondary"
-              onClick={() =>
-                (window.location.href = 'mailto:johannes.stephan@example.com')
-              }
+              onClick={() => (window.location.href = 'mailto:j.stephan@tum.de')}
               className="flex items-center gap-2 bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-200 dark:hover:bg-slate-600"
             >
               <Mail className="w-5 h-5" />
