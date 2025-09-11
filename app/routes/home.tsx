@@ -26,10 +26,111 @@ export default function Home() {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="relative inline-block mb-8">
-            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center text-white text-4xl font-bold shadow-2xl">
-              JS
+            {/* Modern geometric logo with animated elements */}
+            <div className="relative w-32 h-32 group">
+              {/* Main hexagon container */}
+              <div className="w-32 h-32 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 rounded-2xl rotate-12 shadow-2xl transform transition-all duration-500 group-hover:rotate-0 group-hover:scale-105">
+                {/* Inner geometric pattern */}
+                <div className="absolute inset-2 bg-white/10 rounded-xl backdrop-blur-sm">
+                  {/* Animated dots representing graph nodes */}
+                  <div className="absolute top-3 left-3 w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                  <div className="absolute top-3 right-3 w-2 h-2 bg-cyan-300 rounded-full animate-pulse delay-150"></div>
+                  <div className="absolute bottom-3 left-3 w-2 h-2 bg-yellow-300 rounded-full animate-pulse delay-300"></div>
+                  <div className="absolute bottom-3 right-3 w-2 h-2 bg-pink-300 rounded-full animate-pulse delay-450"></div>
+
+                  {/* Connecting lines representing graph edges */}
+                  <svg
+                    className="absolute inset-0 w-full h-full"
+                    viewBox="0 0 100 100"
+                  >
+                    <line
+                      x1="20"
+                      y1="20"
+                      x2="80"
+                      y2="20"
+                      stroke="rgba(255,255,255,0.3)"
+                      strokeWidth="1"
+                      className="animate-pulse"
+                    />
+                    <line
+                      x1="20"
+                      y1="20"
+                      x2="20"
+                      y2="80"
+                      stroke="rgba(255,255,255,0.3)"
+                      strokeWidth="1"
+                      className="animate-pulse delay-100"
+                    />
+                    <line
+                      x1="80"
+                      y1="20"
+                      x2="80"
+                      y2="80"
+                      stroke="rgba(255,255,255,0.3)"
+                      strokeWidth="1"
+                      className="animate-pulse delay-200"
+                    />
+                    <line
+                      x1="20"
+                      y1="80"
+                      x2="80"
+                      y2="80"
+                      stroke="rgba(255,255,255,0.3)"
+                      strokeWidth="1"
+                      className="animate-pulse delay-300"
+                    />
+                    <line
+                      x1="20"
+                      y1="20"
+                      x2="80"
+                      y2="80"
+                      stroke="rgba(255,255,255,0.2)"
+                      strokeWidth="1"
+                      className="animate-pulse delay-400"
+                    />
+                    <line
+                      x1="80"
+                      y1="20"
+                      x2="20"
+                      y2="80"
+                      stroke="rgba(255,255,255,0.2)"
+                      strokeWidth="1"
+                      className="animate-pulse delay-500"
+                    />
+                  </svg>
+
+                  {/* Central initials */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-white text-2xl font-bold tracking-wider">
+                      JS
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating geometric elements */}
+              <div
+                className="absolute -top-2 -left-2 w-4 h-4 bg-gradient-to-br from-cyan-400 to-blue-500 rounded transform rotate-45 animate-bounce"
+                style={{ animationDelay: '0s' }}
+              ></div>
+              <div
+                className="absolute -top-1 -right-3 w-3 h-3 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full animate-bounce"
+                style={{ animationDelay: '0.5s' }}
+              ></div>
+              <div
+                className="absolute -bottom-2 -right-2 w-5 h-5 bg-gradient-to-br from-yellow-400 to-orange-500 rounded transform rotate-12 animate-bounce"
+                style={{ animationDelay: '1s' }}
+              ></div>
+              <div
+                className="absolute -bottom-1 -left-3 w-3 h-3 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full animate-bounce"
+                style={{ animationDelay: '1.5s' }}
+              ></div>
             </div>
-            <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-emerald-500 rounded-full border-4 border-white dark:border-slate-900 shadow-lg"></div>
+
+            {/* Status indicator */}
+            <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-emerald-500 rounded-full border-4 border-white dark:border-slate-900 shadow-lg flex items-center justify-center">
+              <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
+            </div>
           </div>
 
           <h1 className="text-5xl font-bold  dark:text-white mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
