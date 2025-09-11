@@ -1,0 +1,15 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      # this is very important as docker would otherwise publish it to be accessed without caddy (127.*..)
+      - '127.0.0.1:8080:3000'
+    restart: unless-stopped
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
