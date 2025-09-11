@@ -42,5 +42,5 @@ This repo includes a `Dockerfile` and a `Caddyfile` for containerized deployment
 
 ## Notes
 
-- Node 18+ recommended.
+- Node 22 recommended.
 - App source is under `app/` and static assets live in `public/`.
