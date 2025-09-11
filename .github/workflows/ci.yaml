@@ -1,0 +1,38 @@
+name: Frontend - FMT, LINT, TYPECHECK, BUILD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  website:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          # Node 24 does not work - docker build will fail but ci and local are green
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: './package-lock.json'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check formatting
+        run: npm run format:check
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Type check
+        run: npm run typecheck
+
+      - name: Build project
+        run: npm run build
