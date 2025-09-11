@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Network, Eye, Brain } from 'lucide-react';
+import { Github, Linkedin, Mail, Network, Eye, Gamepad2 } from 'lucide-react';
 import { Button } from '~/components/ui/button';
 import {
   Card,
@@ -271,21 +271,22 @@ export default function Home() {
               <CardHeader>
                 <div className="flex items-center gap-3 mb-2">
                   <div className="p-2 bg-emerald-500 rounded-lg">
-                    <Brain className="w-6 h-6 text-white" />
+                    <Gamepad2 className="w-6 h-6 text-white" />
                   </div>
                   <CardTitle className="text-xl text-emerald-900 dark:text-emerald-100">
-                    Machine Learning
+                    Game Theory
                   </CardTitle>
                 </div>
                 <CardDescription className="text-emerald-700 dark:text-emerald-200">
-                  Interdisciplinary algorithmic research
+                  Strategic game solving and AI algorithms
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-emerald-800 dark:text-emerald-200 leading-relaxed">
-                  Bridging graph theory and computer vision through machine
-                  learning, exploring graph neural networks and their
-                  applications in visual understanding.
+                  Implementing game-solving algorithms using alpha-beta pruning
+                  for games like Tic-Tac-Toe, Connect Four, and Skat. Exploring
+                  minimax optimization and strategic decision-making in
+                  competitive environments.
                 </p>
               </CardContent>
             </Card>
