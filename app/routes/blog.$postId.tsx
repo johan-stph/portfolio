@@ -1,7 +1,6 @@
 import { Link, useParams } from 'react-router';
 import { useEffect } from 'react';
 import { Button } from '~/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '~/components/ui/card';
 
 export function meta({ params }: { params: { postId: string } }) {
   const post = getBlogPost(params.postId);
