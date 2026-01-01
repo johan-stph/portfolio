@@ -1,5 +1,6 @@
-import { Mail, Network, Eye, Gamepad2 } from 'lucide-react';
+import { Mail, Network, Eye, Gamepad2, BookOpen } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { Link } from 'react-router';
 import { Button } from '~/components/ui/button';
 import {
   Card,
@@ -180,6 +181,16 @@ export default function Home() {
               <FaLinkedin className="w-5 h-5" />
               LinkedIn
             </Button>
+
+            <Link to="/blog">
+              <Button
+                variant="outline"
+                className="flex items-center gap-2 border-purple-200 text-purple-700 hover:bg-purple-50 dark:border-purple-700 dark:text-purple-300 dark:hover:bg-purple-950"
+              >
+                <BookOpen className="w-5 h-5" />
+                Blog
+              </Button>
+            </Link>
 
             <Button
               variant="secondary"
